@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { FiThumbsUp } from "react-icons/fi";
 
 export default async function MoviePage({params}) {
   const movieId = params.id;
@@ -24,10 +25,11 @@ export default async function MoviePage({params}) {
             <span className="font-semibold mr-1">Date Released:</span>
             {movie.release_date || movie.first_air_date}
           </p>
-          <p className="mb-3">
+          <p className="mb-3 flex items-center">
             <span className="font-semibold mr-1">Rating:</span>
+            <FiThumbsUp className="h-5 mr-1 ml-3" />
             {movie.vote_count}
-            </p>
+          </p>
         </div>
       </div>
     </div>
